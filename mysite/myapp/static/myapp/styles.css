@@ -575,9 +575,20 @@ video {
   line-height: 1.75rem;
 }
 
+
+span {
+  margin-left: 10px;
+  margin-top: 8px;
+}
+
+.logo {
+  margin-left: 10px;
+  height: 45px;
+  width: 45px;
+}
 nav {
   background-color: rgb(255, 255, 255);
-  box-shadow: #d4c6f3 0px 5px 5px;
+  box-shadow: #c5c4c4 0px 4px 7px;
 }
 
 .header {
