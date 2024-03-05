@@ -1,7 +1,12 @@
+{% extends "myapp/base.html" %}
+
+{% block content %}
 <h1>
     This detail page for :</br></br>
     <h2>
-     {{ item.name }} </br>
-    {{ item.description }}
+    {{ item.name }}: </br>
+    {{ item.description }} </br></br>
+    Price: {{ item.price }} $
 </h2>
 </h1>
+{% endblock %}

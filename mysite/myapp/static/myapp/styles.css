@@ -574,3 +574,44 @@ video {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
+
+nav {
+  background-color: rgb(255, 255, 255);
+  box-shadow: #d4c6f3 0px 5px 5px;
+}
+
+.header {
+  max-width: 600px;
+  padding: 5px;
+}
+
+.nav_items {
+  display: flex;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 5px;
+  padding: auto;
+}
+
+.home {
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  margin-right: 10px;
+  padding: 5px;
+  border-bottom: greenyellow 2px solid;
+}
+
+.cart {
+  font-weight: bold;
+  font-style: ;
+  color: rgb(0, 0, 0);
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.about {
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  margin-right: 10px;
+  padding: 5px;
+}
