@@ -578,17 +578,21 @@ video {
 
 span {
   margin-left: 10px;
-  margin-top: 8px;
+  margin-top: 12px;
 }
 
 .logo {
+  margin-top: 6px;
   margin-left: 10px;
   height: 45px;
   width: 45px;
 }
 nav {
+  height: 65px;
+  margin-bottom: 20px;
   background-color: rgb(255, 255, 255);
   box-shadow: #c5c4c4 0px 4px 7px;
+  padding: auto;
 }
 
 .header {
@@ -607,22 +611,39 @@ nav {
 .home {
   font-weight: bold;
   color: rgb(0, 0, 0);
-  margin-right: 10px;
-  padding: 5px;
+  margin-right: 25px;
+  padding-top: 10px;
+}
+
+.home:hover {
   border-bottom: greenyellow 2px solid;
+  transition: ease 0.2s;
+  transform: scale3d(1.1, 1.1, 1.1);
 }
 
 .cart {
   font-weight: bold;
-  font-style: ;
   color: rgb(0, 0, 0);
-  margin-right: 10px;
-  padding: 5px;
+  margin-right: 25px;
+  padding-top: 10px;
+}
+
+.cart:hover {
+  border-bottom: greenyellow 2px solid;
+  transition: ease 0.2s;
+  transform: scale3d(1.1, 1.1, 1.1);
 }
 
 .about {
   font-weight: bold;
   color: rgb(0, 0, 0);
-  margin-right: 10px;
-  padding: 5px;
+  margin-right: 25px;
+  padding-top: 10px;
+}
+
+.about:hover {
+  border-bottom: greenyellow 2px solid;
+  transition: ease 0.2s;
+  transform: scale3d(1.1, 1.1, 1.1);
+
 }
