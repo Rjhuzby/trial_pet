@@ -1,12 +1,18 @@
 {% extends 'myapp/base.html' %}
 {% load static %}
 
+<head>
+	<link rel="stylesheet" href="{% static 'myapp/styles.css' %}">
+</head>
+
 {% block title %}
 	JustShop
 {% endblock %}
+
 {% block content %}
 
-    <h3>
+<div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 xl:grid-cols-3 lg:grid-col-3 gap-3">
+    <h4>
         <!-- <a href="/myapp/hello/{{ item.id }}/"></a> -->
         {% for item in items %}
         <a href="{% url 'myapp:detail' item.id %}">
@@ -15,6 +21,8 @@
         </a>
         {% endfor %}
 
-    </h3>
+    </h4>
+		
+</div>
 		
 {% endblock %}

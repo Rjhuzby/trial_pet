@@ -6,12 +6,15 @@
 
 {% block content %}
 
+<div class="pics">
 <h1>
     This detail page for :</br></br>
     <h2>
     {{ item.name }}: </br>
     {{ item.description }} </br></br>
     Price: {{ item.price }} $
+    <img src="{{ item.image.url}}" alt="pic">
 </h2>
 </h1>
+</div>
 {% endblock %}
