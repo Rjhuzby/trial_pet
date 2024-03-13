@@ -27,7 +27,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.humanize',
     
-    'myapp'
+    'myapp',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -115,3 +116,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL = '/media/'
+
+LOGIN_REDIRECT_URL = 'myapp:index'
+LOGIN_URL = 'users:login'
+# LOGOUT_REDIRECT_URL = 'myapp:index'  

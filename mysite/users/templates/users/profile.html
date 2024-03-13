@@ -1,0 +1,22 @@
+{% extends 'myapp/base.html' %}
+
+{% block content %}
+
+{% if user.profile %}
+<div class='grid p-10 grid-cols-1 lg:grid cols-3 sm:grid-cols-1 '>
+    <div class ='rounded shadow-lg'>
+        <div>
+            {% if user.profile.image.url %}
+            <img class="h-[200px] w-[200px] rounded shadow-lg" src="{{ user.profile.image.url }}" alt="">
+            {% endif %}
+        </div>
+        <h1 class="text-xl m-2 font-bold">{{ user.username }}</h1>
+    </div>
+</div>
+    {% else %}
+    <form action="" method="post">
+        <h1>FORM Profile</h1>
+    </form>
+{% endif %}
+
+{% endblock %}

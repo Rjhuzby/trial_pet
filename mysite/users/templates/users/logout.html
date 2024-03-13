@@ -1,0 +1,9 @@
+{% extends 'myapp/base.html' %}
+
+{% block content %}
+<form action="{% url 'users:logout' %}" method="post"> 
+    {% csrf_token %} 
+    <h2 class="py-4 px-2 text-gray-500 font-semibold">Вы успешно вышли из профиля</h2>
+</form>
+
+{% endblock %}
