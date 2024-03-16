@@ -1,8 +1,8 @@
-from django.http import HttpResponse, Http404
 from django.shortcuts import render, redirect
 from .models import Product
+from django.contrib.auth.decorators import login_required
 
-
+@login_required
 def index(request):
     items = Product.objects.all()
     context = {
@@ -24,7 +24,8 @@ def add_item(request):
         price = request.POST.get('price')
         description = request.POST.get('description')
         image = request.FILES.get('upload') 
-        item = Product(name=name, price=price, description=description, image=image).save()
+        seller = request.user
+        item = Product(name=name, price=price, description=description, image=image, seller=seller).save()
     return render(request, 'myapp/additem.html')
 
 def update_item(request, my_id):
