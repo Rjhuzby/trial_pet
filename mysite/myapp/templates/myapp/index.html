@@ -20,6 +20,13 @@
 		<p class="mt-5 text-base text-gray-500 sm:mt-5 sn:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0 ">Заказывайте товары из любой точки мира. Доставка - бесплатно.</p>
 	</div>
 
+	<div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+		<h2>Поиск</h2>
+		<form action="" method="get">
+			<input type="text" name="Поиск" placeholder="Поиск">
+		</form>
+	</div>
+
 	<div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 xl:grid-col-3 lg:grid-col-3 gap-3">
   	{% for item in items %}
 			<a href="{% url 'myapp:detail' item.id %}">
@@ -35,6 +42,26 @@
       </a>
     {% endfor %}
 	</div>
+
+	<div>
+		<span>
+			{% if page_obj.has_previous %}
+				<a href="?page=1">Первая</a>
+				<a href="?page={{ page_obj.previous_page_number }}">Предыдущая</a>
+			{% endif %}
+		</span>
+		<span>
+			{{ page_obj }}
+		</span>
+
+		<span>
+			{% if page_obj.has_next  %}
+				<a href="?page={{ page_obj.next_page_number }}">Следующая</a>
+				<a href="?page={{ page_obj.paginator.num_pages }}">Последняя</a>
+			{% endif %}
+		</span>
+	</div>
+
 </main>
 
 

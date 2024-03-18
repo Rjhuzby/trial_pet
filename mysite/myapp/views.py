@@ -15,6 +15,7 @@ class ProductListView(ListView):
     model = Product
     template_name = 'myapp/index.html'
     context_object_name = 'items'
+    paginate_by = 6
 
 # def indexItem(request, my_id):
 #     item = Product.objects.get(id=my_id)
