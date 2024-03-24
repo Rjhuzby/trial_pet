@@ -21,14 +21,13 @@
 	</div>
 
 	<div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-		<h2>Поиск</h2>
 		<form action="" method="get">
-			<input type="text" name="Поиск" placeholder="Поиск">
+			<input class="shadow appearance-none border rounded w-full py-2 px-8 mr-10 ml-10 mb-20 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="search" placeholder="Поиск по товарам...">
 		</form>
 	</div>
 
 	<div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 xl:grid-col-3 lg:grid-col-3 gap-3">
-  	{% for item in items %}
+  	{% for item in page_obj %}
 			<a href="{% url 'myapp:detail' item.id %}">
 				<div class="rounded overflow-hidden shadow-lg">
 					<img class="w-full h-[380px]" src="{{ item.image.url}}" alt="pic">
